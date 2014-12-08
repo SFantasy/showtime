@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Menu</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimal-ui"/>
+    <link rel="stylesheet" href="./style.css"/>
+</head>
+<body>
+<div class="container">
+
+    <div class="menu hide">
+        <div class="profile">
+            <img src="http://placehold.it/60x60" alt=""/>
+        </div>
+        <ul>
+            <li>开通会员</li>
+            <li>QQ钱包</li>
+            <li>个性装扮</li>
+            <li>我的收藏</li>
+            <li>我的相册</li>
+            <li>我的文件</li>
+        </ul>
+    </div>
+
+    <div class="content">
+        <header class="header">
+            <img id="toggle" src="http://placehold.it/30x30" alt=""/>
+        </header>
+        <ul>
+            <li>
+                <img src="http://placehold.it/50x50" alt=""/>
+                <p>Jack</p>
+            </li>
+            <li>
+                <img src="http://placehold.it/50x50" alt=""/>
+                <p>Rose</p>
+            </li>
+            <li>
+                <img src="http://placehold.it/50x50" alt=""/>
+                <p>Frank</p>
+            </li>
+            <li>
+                <img src="http://placehold.it/50x50" alt=""/>
+                <p>Jay</p>
+            </li>
+            <li>
+                <img src="http://placehold.it/50x50" alt=""/>
+                <p>Jolin</p>
+            </li>
+            <li>
+                <img src="http://placehold.it/50x50" alt=""/>
+                <p>Ray</p>
+            </li>
+            <li>
+                <img src="http://placehold.it/50x50" alt=""/>
+                <p>Hebe</p>
+            </li>
+            <li>
+                <img src="http://placehold.it/50x50" alt=""/>
+                <p>July</p>
+            </li>
+            <li>
+                <img src="http://placehold.it/50x50" alt=""/>
+                <p>Penny</p>
+            </li>
+        </ul>
+    </div>
+
+</div>
+<script>
+
+(function () {
+
+    var toggleEl = document.getElementById('toggle');
+    var menu = document.querySelector('.menu');
+    var content = document.querySelector('.content');
+
+    toggleEl.addEventListener('touchend', function () {
+        menu.classList.toggle('hide');
+        content.classList.toggle('active');
+    });
+
+    menu.addEventListener('touchend', function () {
+        menu.classList.add('hide');
+        content.classList.remove('active');
+    });
+
+})();
+
+</script>
+</body>
+</html>
