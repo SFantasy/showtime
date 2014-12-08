@@ -1,0 +1,113 @@
+/**
+ * CSS3 Dice
+ * Using CSS3 transform, transition and animation
+ * Copyright 2014 Fantasy Shao
+ */
+
+header {
+  text-align: center;
+}
+
+.cube {
+  perspective: 600px;
+  perspective-origin: 50% 50%;
+  width: 100px;
+  height: 100px;
+  margin: 100px auto;
+  position: relative;
+}
+
+.btns {
+  width: 400px;
+  margin: 0 auto;
+}
+
+.origin {
+  height: 100px;
+  width: 100px;
+  background-color: rgba(0, 0, 0, 0);
+  position: absolute;
+  transform-style: preserve-3d;
+}
+
+.active {
+  -webkit-animation: around 1s infinite ease-in-out;
+}
+
+@-webkit-keyframes around {
+  0% {
+    transform: rotateX(0deg) rotateY(0deg);
+  }
+  50% {
+    transform: rotateX(360deg) rotateY(360deg);
+  }
+  100% {
+    transform: rotateX(-360deg) rotateY(-360deg);
+  }
+}
+
+.wall {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  box-sizing: border-box;
+  border: 1px solid rgba(0, 0, 0, .5);
+  font-size: 30px;
+  color: white;
+  text-align: center;
+  line-height: 100px;
+}
+
+.front {
+  transform: translateZ(50px);
+  background-color: rgba(255, 0, 0, .7);
+}
+
+.back {
+  transform: translateZ(-50px) rotateX(180deg);
+  background-color: rgba(0, 255, 255, .7);
+}
+
+.left {
+  transform: rotateY(-90deg) translateZ(50px);
+  background-color: rgba(0, 255, 0, .7);
+}
+
+.right {
+  transform: rotateY(90deg) translateZ(50px);
+  background-color: rgba(0, 0, 255, .7);
+}
+
+.top {
+  transform: rotateX(90deg) translateZ(50px);
+  background-color: rgba(220, 220, 0, .7);
+}
+
+.bottom {
+  transform: rotateX(-90deg) translateZ(50px);
+  background-color: rgba(255, 0, 255, .7);
+}
+
+.one {
+  transform: rotateX(0deg) rotateY(0deg);
+}
+
+.two {
+  transform: rotateX(0deg) rotateY(90deg);
+}
+
+.three {
+  transform: rotateX(180deg) rotateY(0deg);
+}
+
+.four {
+  transform: rotateX(0deg) rotateY(-90deg);
+}
+
+.five {
+  transform: rotateX(-90deg) rotateY(0deg);
+}
+
+.six {
+  transform: rotateX(90deg) rotateY(0deg);
+}
