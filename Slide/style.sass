@@ -1,0 +1,82 @@
+@charset "UTF-8"
+
+/*
+ * share.sass
+ *
+ * Copyright 2014 Fantasy Shao
+ *
+ * @description 
+ * @author fantasy
+ * @create 2014-12-11
+ * @update 2014-12-11
+ */
+
+@import "mixin"
+
+// Global
+//---------------
+html, body
+  margin: 0
+  padding: 0
+  width: 100%
+  height: 100%
+  overflow: hidden
+
+body
+  @include bg-gradient(#DBDDDE, #898C90)
+  
+.hidden
+  display: none !important
+
+// Variables
+//----------------
+
+// Wrapper
+//----------------
+.wrapper
+  height: 100%
+  width: 100%
+  @include transition(-webkit-transform 0.5s ease)
+  @include transition(transform 0.5s ease)
+  &.active
+    @include transform(scale(0.6))
+
+// Share slide
+//----------------
+.share
+  position: absolute
+  top: 0
+  left: 0
+  height: 100vh
+  width: 100vw
+  @include transition(-webkit-transform 0.5s ease)
+  @include transition(transform 0.5s ease)
+  &.prev
+    @include transform(translateX(-100%) translateZ(-50px) rotateY(60deg))
+  &.current
+    @include transform(translateX(0) translateZ(0) rotateX(0deg) rotateY(0deg))
+  &.next
+    @include transform(translateX(100%) translateZ(-50px) rotateY(-60deg))
+
+// Theme
+//----------------
+.theme-blue
+  background-color: #2196F3
+  color: white
+
+.theme-teal
+  background-color: #009688
+  color: white
+
+.theme-cyan
+  background-color: #00BCD4
+  color: white
+
+.theme-pink
+  background-color: #E91E63
+  color: white
+
+.theme-grey
+  background-color: #9E9E9E
+  color: black
+
